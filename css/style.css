@@ -14,8 +14,7 @@ div#carousel {
     display: flex;
     margin-top: 1%;
     justify-content: center;
-    
-    height: 46vh;
+    height: 45vh;
     width: 100%;
      max-height: 628px;
     -webkit-transition: all .3s ease-in-out;
