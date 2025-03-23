@@ -30,7 +30,7 @@ class Carousel {
 
             // Atualiza a imagem dos carros como uma imagem redirecionavel(obgd youtube)
             carouselElement.innerHTML = `<a href="${currentImage.link}">
-                <img src="img/${currentImage.img}" width="730"
+                <img src="img/${currentImage.img}" width="700"
             </a>`
 
             // coloca outro titulo na pagina dos carros
