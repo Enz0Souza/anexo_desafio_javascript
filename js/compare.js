@@ -51,8 +51,8 @@ function SetCarToCompare(el, carClass) {//limita a comparção a 2 carros e proc
     }
 }
 
-function ShowCompare() {//caso o animal(usuario)não selecionar 2 carros
-    if (carArr.length < 2) {
+function ShowCompare() {
+    if (carArr.length < 2) {//caso o animal(usuario)não selecionar 2 carros
         alert("Precisa marcar 2 carros para apresentar a comparação");
         return;
     }
@@ -60,7 +60,7 @@ function ShowCompare() {//caso o animal(usuario)não selecionar 2 carros
     UpdateCompareTable();
     let compareDiv = document.getElementById("compare");
     compareDiv.style.display = "block";
-    compareDiv.scrollIntoView({ behavior: "smooth" });// faz o scroll automatico dela
+    compareDiv.scrollIntoView({ behavior: "smooth" });// faz o scroll automatico dela(ou seja quando fazer a comparação subir a pagina e fazer a tabela aparecer)
 }
 
 
@@ -70,7 +70,7 @@ function HideCompare() {
 }
 
 function UpdateCompareTable() {
-    if (carArr.length < 2) return;
+    if (carArr.length < 2) return;//caso o animal(usuario)não selecionar 2 carros
 
     for (let i = 0; i < 2; i++) {
         let car = carArr[i];
@@ -86,7 +86,7 @@ function UpdateCompareTable() {
         document.getElementById(`compare_roda_${i}`).innerText = car.roda;
         document.getElementById(`compare_preco_${i}`).innerText = "R$ " + car.preco.toLocaleString();
 
-        // Exibir as imagens dos carros
+        // Exibir as imagens dos carros(lembrete: fazer um easter egg se eu fizer algo na pagina aparecer o relampago marquinhos)
         document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="100">`;
     }
 }

@@ -1,7 +1,7 @@
 
 //class contato
 
-class contato {//mesma coisa do carrosel e comapre nem vou me dar o trabalho de explicar essa misera
+class contato {//mesma coisa do compare nem vou me dar o trabalho de explicar essa misera(até porque nem sei realmente como funfa direito akakkakakaka)
     constructor(nome, sobrenome, email, cpf, telefone, contato){
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -20,11 +20,13 @@ function Post(form) {
             form.elements.namedItem("email").value, 
             form.elements.namedItem("cpf").value, 
             form.elements.namedItem("telefone").value, 
-            form.elements.namedItem("contato").value);
-  
+            form.elements.namedItem("contato").value
+        );
+            
 }
 
-function Enviar() {
+
+function Enviar(data) {
 
     var nome = document.getElementById("nomeid");
 
