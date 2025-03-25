@@ -5,7 +5,7 @@
 //Array storage class(armazena as imagens do carrosel)
 let carouselArr = [];
 
-//class Carousel("carousel" kkkkkkkkkkkkkkkkkkk)(modelo para representar cada imagem do carrosel)
+//class Carousel(modelo para representar cada imagem do carrosel)
 class Carousel {
     static Start(arr) {
         if (arr && arr.length > 0) {//verifica se tem imagens no carrosel
@@ -14,7 +14,7 @@ class Carousel {
             Carousel.Next(); // Iniciar carrossel
             Carousel._interval = setInterval(function () {
                 Carousel.Next();//exibe a primeira imagem antes da troca e quanto tempo pra trocar
-            }, 2000);//era pra ser 5000 mas tava demorando mt(perguntar pra atila ou pra juarez quanto tempo devo deixar 5000 é sacanagem)
+            }, 2000);
             } else {
                 throw "Method Start need a Array Variable.";//acho que é uma mensagem de erro(lembrete:TRADUZIR OU MUDAR A MENSAGEM.)
             }
@@ -30,7 +30,7 @@ class Carousel {
 
             // Atualiza a imagem dos carros como uma imagem redirecionavel(obgd youtube)
             carouselElement.innerHTML = `<a href="${currentImage.link}">
-                <img src="img/${currentImage.img}" width="700"
+                <img  src="img/${currentImage.img}" width="700"
             </a>`
 
             // coloca outro titulo na pagina dos carros

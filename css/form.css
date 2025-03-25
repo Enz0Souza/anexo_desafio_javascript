@@ -60,3 +60,28 @@ button {
     margin-left: 8px;
 }
 
+
+@media screen and (max-width: 673px) {
+
+    footer{
+      border-top: 1px solid #333;
+      bottom: 0;
+      left: 0;
+      height: 40px;
+      position: fixed;
+      width: 100%;
+    }
+    
+    #imagemcarrinho{
+        max-width:200px;
+        max-height:150px;
+        width: auto;
+        height: auto;
+    }
+    
+    
+    
+}
+
+
+

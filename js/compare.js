@@ -28,7 +28,7 @@ function GetCarArrPosition(arr, carClass) {
     return -1;
 }
 
-function SetCarToCompare(el, carClass) {//limita a comparção a 2 carros e procura os carros selecionados para pegar as info e comparar(chat ajudou mt)
+function SetCarToCompare(el, carClass) {//limita a comparção a 2 carros e procura os carros selecionados para pegar as info e comparar
     if (!(carClass instanceof Car)) {
         throw "Você precisa definir uma instância válida da classe Car";
     }
@@ -57,24 +57,24 @@ function ShowCompare() {
         return;
     }
 
-    UpdateCompareTable();
+    UpdateCompareTable();//atualizar os dados da tabela
     let compareDiv = document.getElementById("compare");
-    compareDiv.style.display = "block";
+    compareDiv.style.display = "block";//faz com que a tabela seja exibida em um bloco
     compareDiv.scrollIntoView({ behavior: "smooth" });// faz o scroll automatico dela(ou seja quando fazer a comparação subir a pagina e fazer a tabela aparecer)
 }
 
 
 
-function HideCompare() {
+function HideCompare() {//esconde a tabela
     document.getElementById("compare").style.display = "none";
 }
 
 function UpdateCompareTable() {
-    if (carArr.length < 2) return;//caso o animal(usuario)não selecionar 2 carros
+    if (carArr.length < 2) return;//caso o usuario não selecione 2 carros
 
-    for (let i = 0; i < 2; i++) {
-        let car = carArr[i];
-        //tabela de comparação
+    for (let i = 0; i < 2; i++) {//codigo loop que une 2 elementos para prenhcer a tabeçla
+        let car = carArr[i];//recebe o valor do elemento no array isso permite acessar os dados dos carros
+        //preenche a tabela com o codigo document.getelementbyid e busca as informações para preecnehr os valores
         document.getElementById(`compare_modelo_${i}`).innerText = car.nome;
         document.getElementById(`compare_alturacacamba_${i}`).innerText = car.alturaCacamba + " mm";
         document.getElementById(`compare_alturaveiculo_${i}`).innerText = car.alturaVeiculo + " mm";
@@ -90,3 +90,9 @@ function UpdateCompareTable() {
         document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="100">`;
     }
 }
+
+//lembretes: innertext é uma propriedade que retorna o conteudo de um teto html
+/*a função toLocaleString formata o preço de forma adequada para o padrão de numeros local (por exemplo, separando milhar e com virgula no
+lugar de ponto dependendo do pais)
+
+*/
