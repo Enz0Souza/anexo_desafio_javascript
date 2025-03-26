@@ -15,9 +15,9 @@ class Carousel {
             Carousel._interval = setInterval(function () {
                 Carousel.Next();//exibe a primeira imagem antes da troca e quanto tempo pra trocar
             }, 2000);
-            } else {
-                throw "Method Start need a Array Variable.";//acho que é uma mensagem de erro(lembrete:TRADUZIR OU MUDAR A MENSAGEM.)
-            }
+        } else {
+            throw "Method Start need a Array Variable.";//acho que é uma mensagem de erro(lembrete:TRADUZIR OU MUDAR A MENSAGEM.)
+        }
     }
     static Next() {
         ///contêiner do carrossel

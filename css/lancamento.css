@@ -75,13 +75,13 @@ div#compare {
     width: 50vw;
     max-width: 800px;
     min-width: 400px;
-    height: 80vh;
+    height: 87vh;
     max-height: 700px;
     min-height: 350px;
     background: #fff;
     top: calc(100vh - 80%);
     left: 25vw;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 10px;
     -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
     box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
@@ -100,13 +100,11 @@ div#compare {
     }
 
     img.photocar {
-        max-width: 200px;
-        max-height: 150px;
-        width: auto;
+        width: 200px auto;
         height: auto;
     }
-   
-    #buttonn{
+
+    #buttonn {
         margin-bottom: 30%;
     }
 
@@ -119,6 +117,27 @@ div#compare {
 
     div#compare {
         left: 1vw;
-        
+        height: 106vh;
+        border-radius: 30px;
+        max-width: none;
+        min-width: none;
+        max-height: none;
+        min-height: none;
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+    div#compare {
+        height: 106vh;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    div#compare {
+        left: 28%;
+        height: 60vh;
     }
 }

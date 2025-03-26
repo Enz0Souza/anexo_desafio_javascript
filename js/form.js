@@ -1,27 +1,27 @@
 //class contato
 
 class contato {
-    constructor(nome, sobrenome, email, cpf, telefone, contato){//inicializa as propriedades do objeto com os valores passados como argumentos
+    constructor(nome, sobrenome, email, cpf, telefone, contato) {//inicializa as propriedades do objeto com os valores passados como argumentos
         this.nome = nome;
         this.sobrenome = sobrenome;
-        this.email =email;
-        this.cpf=cpf;
-        this.telefone= telefone;
-        this.contato=contato;
+        this.email = email;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.contato = contato;
     }
 }
 
 function Post(form) {// recebe o parametro form que representa o formulario html
 
-  let data = new contato(form.elements.namedItem("nome").value, // armazena as informações que receber
-            form.elements.namedItem("sobrenome").value, 
-            form.elements.namedItem("email").value, 
-            form.elements.namedItem("cpf").value, 
-            form.elements.namedItem("telefone").value, 
-            form.elements.namedItem("contato").value
-        );
+    let data = new contato(form.elements.namedItem("nome").value, // armazena as informações que receber
+        form.elements.namedItem("sobrenome").value,
+        form.elements.namedItem("email").value,
+        form.elements.namedItem("cpf").value,
+        form.elements.namedItem("telefone").value,
+        form.elements.namedItem("contato").value
+    );
 
-        Enviar(data)//passa as informaç~es para enviar
+    Enviar(data)//passa as informaç~es para enviar
 }
 
 // Função para enviar os dados
@@ -32,15 +32,15 @@ function Enviar(data) {
     }
 }
 
-// Evento para carregar os dados salvos ao recarregar a página(obgd cara do youtube vc é 100000)
+// Evento para carregar os dados salvos ao recarregar a página
 window.addEventListener('load', () => {
     const dadosSalvos = localStorage.getItem('dadosUltimoEnvio'); // Pegar o item 'dadosUltimoEnvio'
+
     if (dadosSalvos) {
         try {
-            console.table('Ultimo Envio de Dados:', JSON.parse(dadosSalvos)); // Exibe os dados no console
+            console.table(JSON.parse(dadosSalvos));
         } catch (error) {
             console.error('Erro ao carregar os dados:', error);
         }
     }
 });
-//trim remove espaços em bracno ou seja se o nome só tiver espaço não será computado e será dado como um valor vazio

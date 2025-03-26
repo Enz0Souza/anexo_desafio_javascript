@@ -26,13 +26,13 @@ div#carousel-title a {
     text-decoration: none;
 }
 
-div#carousel-title  {
+div#carousel-title {
     display: block;
     text-align: center;
     margin-top: 10vh;
     margin-bottom: 10px;
     font-weight: bold;
-    
+
 }
 
 header ul {
@@ -43,14 +43,14 @@ header ul {
 }
 
 ul {
-	display: inline-block;
+    display: inline-block;
 }
 
 header {
     background: #FFFFFF;
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 9px;
 }
 
 header div {
@@ -116,6 +116,7 @@ footer div {
 button:hover {
     background: #1b357e;
 }
+
 button {
     background: #1351d8;
     color: #fff;
@@ -123,49 +124,59 @@ button {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 673px) {
+@media screen and (max-width: 702px) {
 
-      footer{
+    footer {
         border-top: 1px solid #333;
         bottom: 0;
         left: 0;
         height: 40px;
         position: fixed;
         width: 100%;
-      }
-      
-      #carousel img {
+    }
+
+    #carousel img {
         width: 100%;
         height: auto;
-        object-fit: cover; 
+        object-fit: cover;
+        overflow-y: auto;
+        overflow-x: auto;
     }
-      
-    div#carousel-title  {
+
+    div#carousel-title {
         display: block;
         text-align: center;
-        margin-top: -130px;
+        margin-top: -80px;
         margin-bottom: 10px;
         font-weight: bold;
-        
+
+    }
+
+    header nav {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 90vw;
+        margin-left: 30px;
+        margin-right: 14px;
     }
 
 }
 
 @media screen and (min-width: 1400px) {
-    div#carousel-title  {
+    div#carousel-title {
         margin-top: -1vh;
-        margin-bottom: px;
         font-weight: bold;
-        
+        text-align: center;
+
     }
 
     #carousel img {
-        margin-left: 20%;
-        margin-top: 2%;
-        width: 60%;
+        margin-left: 1%;
+        margin-top: 10%;
+        width: 80% auto;
         height: auto;
-         
-    }
 
     }
 
+}
