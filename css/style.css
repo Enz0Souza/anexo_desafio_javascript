@@ -163,19 +163,9 @@ button {
 
 }
 
-<<<<<<< HEAD
+
 @media screen and (min-width: 1400px) {
     div#carousel-title {
-=======
-@media screen and (min-width: 1600px) {
-    div#carousel-title  {
->>>>>>> 1e5d2ea0dcc585900afa55e1f624d899258096b7
-        margin-top: -1vh;
-        font-weight: bold;
-        text-align: center;
-
-    }
-
     #carousel img {
         margin-left: 1%;
         margin-top: 10%;
@@ -184,4 +174,5 @@ button {
 
     }
 
+    }
 }
