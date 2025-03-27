@@ -20,8 +20,8 @@ function Post(form) {// recebe o parametro form que representa o formulario html
         form.elements.namedItem("telefone").value,
         form.elements.namedItem("contato").value
     );
-
     Enviar(data)//passa as informaç~es para enviar
+    console.table(JSON.parse(dadosSalvos));
 }
 
 // Função para enviar os dados
@@ -34,7 +34,7 @@ function Enviar(data) {
 
 // Evento para carregar os dados salvos ao recarregar a página
 window.addEventListener('load', () => {
-    const dadosSalvos = localStorage.getItem('dadosUltimoEnvio'); // Pegar o item 'dadosUltimoEnvio'
+    const dadosSalvos = localStorage.getItem('dadosUltimoEnvio');
 
     if (dadosSalvos) {
         try {

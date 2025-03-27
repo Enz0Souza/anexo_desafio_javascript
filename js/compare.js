@@ -52,7 +52,7 @@ function SetCarToCompare(el, carClass) {//limita a comparção a 2 carros e proc
 }
 
 function ShowCompare() {
-    if (carArr.length < 2) {//caso o animal(usuario)não selecionar 2 carros
+    if (carArr.length < 2) {//caso o usuario não selecionar 2 carros
         alert("Precisa marcar 2 carros para apresentar a comparação");
         return;
     }

@@ -87,6 +87,10 @@ div#compare {
     box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
 }
 
+.textolançamento {
+    text-align: center;
+}
+
 
 @media screen and (max-width: 673px) {
 
@@ -95,7 +99,7 @@ div#compare {
         bottom: 0;
         left: 0;
         height: 40px;
-        position: fixed;
+        position: relative;
         width: 100%;
     }
 
@@ -127,13 +131,14 @@ div#compare {
 
 }
 
-
-@media (max-width: 1024px) {
+/* TELA CELULAR EM PÉ*/
+@media (max-width: 702px) {
     div#compare {
         height: 106vh;
     }
 }
 
+/* TELA GRANDE */
 @media screen and (min-width: 1400px) {
 
     div#compare {
@@ -142,10 +147,24 @@ div#compare {
     }
 }
 
+/* TELA DEITADA(LANDSCAPE) */
 @media screen and (max-height: 550px) {
 
-    #buttonn {
-        margin-bottom: 30%;
+    footer {
+        position: relative;
     }
+
+
+    #buttonn {
+        margin-bottom: 10%;
+    }
+
+    div#compare {
+        display: flex;
+        height: 1600vh;
+        border-radius: 30px;
+
+    }
+
 
 }

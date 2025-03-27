@@ -16,14 +16,14 @@ class Carousel {
                 Carousel.Next();//exibe a primeira imagem antes da troca e quanto tempo pra trocar
             }, 2000);
             } else {
-                throw "Method Start need a Array Variable.";//acho que é uma mensagem de erro(lembrete:TRADUZIR OU MUDAR A MENSAGEM.)
+                throw "Method Start need a Array Variable.";
             }
     }
     static Next() {
         ///contêiner do carrossel
         let carouselElement = document.getElementById("carousel");
         let titleElement = document.getElementById("carousel-title");
-        //lembrete && é como um and só que n fizeram como and mas sim como && nmrl programador é retardado
+
         if (carouselElement && titleElement) {
             // pega a imagem atual dos carros
             let currentImage = carouselArr[Carousel._sequence];
@@ -36,7 +36,7 @@ class Carousel {
             // coloca outro titulo na pagina dos carros
             titleElement.innerHTML = `<p>${currentImage.text}</p>`;
 
-            // Muda para a próxima imagem(obgdchat pela ajuda)
+            // Muda para a próxima imagem
             Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
         }
     }

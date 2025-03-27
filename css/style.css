@@ -40,6 +40,7 @@ header ul {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    
 }
 
 ul {
@@ -66,7 +67,7 @@ header nav {
 
 header nav a {
     color: #1351d8;
-    font-size: 20px;
+    font-size: auto;
     text-decoration: none;
     font-weight: 900;
     margin-left: 14px;
@@ -124,6 +125,7 @@ button {
     border-radius: 10px;
 }
 
+/* TELA CELULAR EM PÉ*/
 @media screen and (max-width: 702px) {
 
     footer {
@@ -142,6 +144,7 @@ button {
         overflow-y: auto;
         overflow-x: auto;
         max-height: calc(100% - 85px);
+
     }
 
     div#carousel-title {
@@ -158,36 +161,47 @@ button {
         vertical-align: middle;
         text-align: center;
         width: 90vw;
+
+    }
+
+    .logo {
+        height: 40%;
+        width: 20%;
+    }
+
+    header ul {
+        height: auto;
+        width: auto;
         
     }
-
-   
-
+  
 }
 
-
+/* TELA GRANDE */
 @media screen and (min-width: 1400px) {
     div#carousel-title {
-    #carousel img {
-        margin-left: 1%;
-        margin-top: 10%;
-        width: 80% auto;
-        height: auto;
+        #carousel img {
+            margin-left: 1%;
+            margin-top: 10%;
+            width: 80% auto;
+            height: auto;
 
-    }
+        }
 
     }
 }
 
-@media screen and (max-height: 550px) {
+/* TELA DEITADA(LANDSCAPE) */
+@media screen and (max-height: 540px) {
 
- footer {
+    footer {
         border-top: 1px solid #333;
         bottom: 0;
         left: 0;
         height: 40px;
         position: fixed;
         width: 100%;
+
     }
 
     #carousel img {
@@ -196,13 +210,13 @@ button {
         object-fit: cover;
         overflow-y: auto;
         overflow-x: auto;
-        max-height: calc(100% - 85px);
+        max-height: calc(100% - 20px);
     }
 
     div#carousel-title {
         display: block;
         text-align: center;
-        margin-top: -80px;
+        margin-top: -10px;
         margin-bottom: 10px;
         font-weight: bold;
 
@@ -213,9 +227,13 @@ button {
         vertical-align: middle;
         text-align: center;
         width: 90vw;
-        
+
+
     }
 
-   
+    header ul {
+        margin-top: -4%;
+    }
+
 
 }

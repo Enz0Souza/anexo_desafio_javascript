@@ -91,6 +91,23 @@ button:hover {
         height: auto;
     }
 
+    main div {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+}
 
+@media screen and (max-height: 550px) {
+
+    main div {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
 
 }
