@@ -141,3 +141,11 @@ div#compare {
         height: 60vh;
     }
 }
+
+@media screen and (max-height: 550px) {
+
+    #buttonn {
+        margin-bottom: 30%;
+    }
+
+}
