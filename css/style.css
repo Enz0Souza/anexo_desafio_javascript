@@ -141,6 +141,7 @@ button {
         object-fit: cover;
         overflow-y: auto;
         overflow-x: auto;
+        max-height: calc(100% - 85px);
     }
 
     div#carousel-title {
@@ -157,9 +158,10 @@ button {
         vertical-align: middle;
         text-align: center;
         width: 90vw;
-        margin-left: 30px;
-        margin-right: 14px;
+        
     }
+
+   
 
 }
 
@@ -175,4 +177,45 @@ button {
     }
 
     }
+}
+
+@media screen and (max-height: 702px) {
+
+ footer {
+        border-top: 1px solid #333;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        position: fixed;
+        width: 100%;
+    }
+
+    #carousel img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        overflow-y: auto;
+        overflow-x: auto;
+        max-height: calc(100% - 85px);
+    }
+
+    div#carousel-title {
+        display: block;
+        text-align: center;
+        margin-top: -80px;
+        margin-bottom: 10px;
+        font-weight: bold;
+
+    }
+
+    header nav {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 90vw;
+        
+    }
+
+   
+
 }
