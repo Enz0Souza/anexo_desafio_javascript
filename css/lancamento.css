@@ -92,6 +92,9 @@ div#compare {
 }
 
 
+
+/* celular em pé*/
+
 @media screen and (max-width: 673px) {
 
     footer {
@@ -100,7 +103,7 @@ div#compare {
         left: 0;
         height: 40px;
         position: relative;
-        width: 100%;
+        width: 92%;
     }
 
     img.photocar {
@@ -120,23 +123,24 @@ div#compare {
     }
 
     div#compare {
-        left: 1vw;
+        left: 1vh;
         height: 106vh;
         border-radius: 30px;
-        max-width: none;
-        min-width: none;
-        max-height: none;
-        min-height: none;
+        width: 50vw;
+        max-width: 800px;
+        min-width: 325px;
+        height: 102vh;
+        max-height: 700px;
+        min-height: 350px;
+        background: #fff;
+
+        -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+        box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
     }
 
 }
 
-/* TELA CELULAR EM PÉ*/
-@media (max-width: 702px) {
-    div#compare {
-        height: 106vh;
-    }
-}
+
 
 /* TELA GRANDE */
 @media screen and (min-width: 1400px) {
@@ -160,11 +164,10 @@ div#compare {
     }
 
     div#compare {
-        display: flex;
+        display: none;
         height: 1600vh;
         border-radius: 30px;
 
     }
-
 
 }

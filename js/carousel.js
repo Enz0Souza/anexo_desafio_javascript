@@ -15,9 +15,9 @@ class Carousel {
             Carousel._interval = setInterval(function () {
                 Carousel.Next();//exibe a primeira imagem antes da troca e quanto tempo pra trocar
             }, 2000);
-            } else {
-                throw "Method Start need a Array Variable.";
-            }
+        } else {
+            throw "Method Start need a Array Variable.";
+        }
     }
     static Next() {
         ///contêiner do carrossel
@@ -28,13 +28,13 @@ class Carousel {
             // pega a imagem atual dos carros
             let currentImage = carouselArr[Carousel._sequence];
 
-            // Atualiza a imagem dos carros como uma imagem redirecionavel(obgd youtube)
+            // Atualiza a imagem dos carros como uma imagem redirecionavel
             carouselElement.innerHTML = `<a href="${currentImage.link}">
                 <img  src="img/${currentImage.img}" width="700"
             </a>`
 
             // coloca outro titulo na pagina dos carros
-            titleElement.innerHTML = `<p>${currentImage.text}</p>`;
+            titleElement.innerHTML = `<a href="${currentImage.link}"><p>${currentImage.text}</p></a>`;
 
             // Muda para a próxima imagem
             Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;

@@ -10,6 +10,16 @@ html {
     height: 100%;
 }
 
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 div#carousel {
     display: flex;
     margin-top: 1%;
@@ -17,13 +27,19 @@ div#carousel {
     height: 45vh;
     width: 100%;
     max-height: 628px;
-    -webkit-transition: all .3s ease-in-oot;
+    -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+
+    img {
+        animation: animation 2s;
+    }
+
 }
 
 div#carousel-title a {
     text-decoration: none;
+    color: black;
 }
 
 div#carousel-title {
@@ -40,7 +56,7 @@ header ul {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    
+
 }
 
 ul {
@@ -114,6 +130,17 @@ footer div {
     margin-right: 40px;
 }
 
+.icons img {
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icons img:hover {
+    transform: scale(1.07);
+}
+
 button:hover {
     background: #1b357e;
 }
@@ -124,6 +151,9 @@ button {
     border: 0px;
     border-radius: 10px;
 }
+
+
+
 
 /* TELA CELULAR EM PÉ*/
 @media screen and (max-width: 702px) {
@@ -172,9 +202,13 @@ button {
     header ul {
         height: auto;
         width: auto;
-        
+
     }
-  
+    .redesociais {
+        font-size: 3vw;
+    }
+    
+
 }
 
 /* TELA GRANDE */
