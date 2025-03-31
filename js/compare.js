@@ -39,6 +39,7 @@ function SetCarToCompare(el, carClass) {//limita a comparção a 2 carros e proc
         if (index === -1) {
             if (carArr.length < 2) {
                 carArr.push(carClass);
+                
             } else {
                 alert("Só é possível comparar 2 carros por vez.");
                 el.checked = false;
@@ -50,6 +51,9 @@ function SetCarToCompare(el, carClass) {//limita a comparção a 2 carros e proc
         }
     }
 }
+
+
+
 
 function ShowCompare() {
     if (carArr.length < 2) {//caso o usuario não selecionar 2 carros
@@ -69,6 +73,8 @@ function HideCompare() {//esconde a tabela
     document.getElementById("compare").style.display = "none";
 }
 
+
+
 function UpdateCompareTable() {
     if (carArr.length < 2) return;//caso o usuario não selecione 2 carros
 
@@ -86,13 +92,31 @@ function UpdateCompareTable() {
         document.getElementById(`compare_roda_${i}`).innerText = car.roda;
         document.getElementById(`compare_preco_${i}`).innerText = "R$ " + car.preco.toLocaleString();
 
-        // Exibir as imagens dos carros(lembrete: fazer um easter egg se eu fizer algo na pagina aparecer o relampago marquinhos)
+        // Exibir as imagens dos carros
         document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width="100">`;
     }
 }
 
-//lembretes: innertext é uma propriedade que retorna o conteudo de um teto html
-/*a função toLocaleString formata o preço de forma adequada para o padrão de numeros local (por exemplo, separando milhar e com virgula no
-lugar de ponto dependendo do pais)
+//texto da area de lançamento para fazer animação do typewritter
+var i = 0;//contador onde rastreia qual caractere será exibido no texto
+var txt = "A Ford Ranger 2022 é uma picape robusta e versátil, com design moderno e desempenho de destaque. Equipado com motores a diesel e a gasolina, oferece opções de tração 4x4, ideal para quem busca potência e resistência em diferentes terrenos. A cabine é espaçosa, com tecnologia avançada e recursos de segurança, como controle de estabilidade e assistente de colisão. É uma excelente escolha para quem precisa de força e conforto tanto no trabalho quanto no dia a dia.";
+var speed = 11;//velocidade da digitação
 
-*/
+function typeWriter() {
+    if (i < txt.length) {//verifica se o indice i ainda está dentro do tamanho do texto
+        document.getElementById("textolancamento").innerHTML += txt.charAt(i);//seleciona o elemento html com o id e adiciona o proximo texto txt.charAT(i) ao conteudo existente
+        i++;//adiciona o indice para passar para a proxima letra
+        setTimeout(typeWriter, speed);//chama a função após um intervalo criando o efeito de digitação
+    }
+
+}
+window.addEventListener('load', typeWriter);//ocorrer automaticamente quando o site carregar
+
+
+
+
+
+
+
+
+//botão ficar cinza caso não esteja selecionado nenhum carro

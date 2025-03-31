@@ -16,6 +16,12 @@ img.photocar {
     width: 250px;
 }
 
+ul.modelcars, img.photocar, ul.modelcars li {
+    animation-duration: 3s;
+    animation-name: opacity;
+    animation-direction: normal
+  }
+  
 .checkbox {
     width: 30px;
     height: 30px;
@@ -85,12 +91,31 @@ div#compare {
     padding: 10px;
     -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
     box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+    animation-duration: 1s;
+    animation-name: opacity;
+    animation-direction: normal;
 }
 
-.textolançamento {
+#textolancamento {
     text-align: center;
 }
 
+p {
+    animation-duration: 2s;
+    animation-name: opacity;
+    animation-direction: normal;
+  }
+  
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
 
 
 /* celular em pé*/
@@ -104,7 +129,7 @@ div#compare {
             bottom: 0;
             left: 0;
             height: 40px;
-            position: relative;
+            position: relative;/* por causa de bugs de colisão com a tabela deixei relativo para o conteudo empurrar o footer pro final do */
             width: 92%;
         }
     
@@ -126,14 +151,14 @@ div#compare {
     
         div#compare {
             position: absolute;
-            top: 50%;
+            top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 50vw;
             max-width: 800px;
             min-width: 325px;
             height: 102vh;
-            max-height: 700px;
+            max-height: 750px;
             min-height: 350px;
             border-radius: 30px;
             background: #fff;
@@ -142,6 +167,7 @@ div#compare {
         }
     
     }
+    
 }
     
 

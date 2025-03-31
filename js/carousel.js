@@ -41,7 +41,6 @@ class Carousel {
         }
     }
 }
-
 // modelo do carrosel primeiro imagem texto e dps link até onde eu entendi sla forun é uma desgraça
 class CarouselItem {
     constructor(img, text, link) {

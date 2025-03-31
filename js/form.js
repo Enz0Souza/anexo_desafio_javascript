@@ -21,7 +21,7 @@ function Post(form) {// recebe o parametro form que representa o formulario html
         form.elements.namedItem("contato").value
     );
     Enviar(data)//passa as informaç~es para enviar
-    console.table(JSON.parse(dadosSalvos));
+    console.table(JSON.parse(dadosSalvos));//aparecer as informações no console
 }
 
 // Função para enviar os dados
