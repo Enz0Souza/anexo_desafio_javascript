@@ -110,13 +110,29 @@ function typeWriter() {
     }
 
 }
-window.addEventListener('load', typeWriter);//ocorrer automaticamente quando o site carregar
-
-
-
-
-
-
-
+window.addEventListener('load', typeWriter);//ocorrer automaticamente quando o site carrega
 
 //botão ficar cinza caso não esteja selecionado nenhum carro
+document.addEventListener("DOMContentLoaded", function () {//listener   para executar quando a pagina estiver carregada
+    const checkboxes = document.querySelectorAll(".checkbox");
+    const button = document.getElementById("buttonn");
+
+    function updateButtonState() {
+        const checkedCount = document.querySelectorAll(".checkbox:checked").length;
+        
+        if (checkedCount === 2) {
+            button.style.backgroundColor = "blue"; // Cor do botão quando 2 checkboxes estão selecionadas
+            button.disabled = false;
+        } else {
+            button.style.backgroundColor = "gray"; // Cor do botão quando as checkbox não estão selecionadas
+            button.disabled = true;
+        }
+    }
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", updateButtonState);//listener para mudar a cor do botão
+    });
+
+    updateButtonState(); // uptade  para garantir que o botão comece no estado correto
+});
+
