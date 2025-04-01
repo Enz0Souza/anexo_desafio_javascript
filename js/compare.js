@@ -117,22 +117,22 @@ document.addEventListener("DOMContentLoaded", function () {//listener   para exe
     const checkboxes = document.querySelectorAll(".checkbox");
     const button = document.getElementById("buttonn");
 
-    function updateButtonState() {
+    function updateButto() {
         const checkedCount = document.querySelectorAll(".checkbox:checked").length;
         
         if (checkedCount === 2) {
             button.style.backgroundColor = "blue"; // Cor do botão quando 2 checkboxes estão selecionadas
-            button.disabled = false;
+            
         } else {
             button.style.backgroundColor = "gray"; // Cor do botão quando as checkbox não estão selecionadas
-            button.disabled = true;
+            
         }
     }
 
     checkboxes.forEach(checkbox => {
-        checkbox.addEventListener("change", updateButtonState);//listener para mudar a cor do botão
+        checkbox.addEventListener("change", updateButto);//listener para mudar a cor do botão
     });
 
-    updateButtonState(); // uptade  para garantir que o botão comece no estado correto
+    updateButto(); // uptade  para garantir que o botão comece no estado correto
 });
 
