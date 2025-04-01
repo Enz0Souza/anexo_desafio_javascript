@@ -112,6 +112,8 @@ function typeWriter() {
 }
 window.addEventListener('load', typeWriter);//ocorrer automaticamente quando o site carrega
 
+
+//
 //botão ficar cinza caso não esteja selecionado nenhum carro
 document.addEventListener("DOMContentLoaded", function () {//listener   para executar quando a pagina estiver carregada
     const checkboxes = document.querySelectorAll(".checkbox");
