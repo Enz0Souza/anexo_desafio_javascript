@@ -85,7 +85,7 @@ header nav {
 }
 header nav a{
     text-align: center;
-    font-size: 120%;
+    font-size: 100%;
     color: #1351d8;
     text-decoration: none;
     border: px solid rgb(3, 3, 138);
@@ -203,10 +203,11 @@ button {
     }
 
     header nav {
-        display: inline-block;
+        display: inline;
         vertical-align: middle;
         text-align: center;
-        width: 90vw;
+        max-width: 100vw;
+        min-width: 85vw;
 
     }
 
