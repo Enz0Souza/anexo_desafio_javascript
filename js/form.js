@@ -26,7 +26,7 @@ function Post(form) {// recebe o parametro form que representa o formulario html
 
 // Função para enviar os dados
 function Enviar(data) {
-    if (data.nome && data.nome.trim() !== "") {
+    if (data.nome !== "") {
         localStorage.setItem('dadosUltimoEnvio', JSON.stringify(data)); // Salva os dados do usuario no localStorage
         alert('Obrigado sr(a) ' + data.nome + ' os seus dados foram encaminhados com sucesso');
     }

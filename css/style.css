@@ -51,10 +51,10 @@ div#carousel-title {
 
 .buttons { 
     position: absolute; 
-    top: 37%; 
-    left: 28%;
+    top: 43%; 
+    left: 23%;
     transform: translateY(-50%); 
-    width: 44%; 
+    width: 54%; 
     display: flex; 
     justify-content: space-between; 
 }
@@ -103,10 +103,8 @@ header nav a{
     text-decoration: none;
     border: px solid rgb(3, 3, 138);
     border-radius: 20px;
-    padding: 15px 0;
+    padding: 15px 6px;
     margin: 1%;
-  
-  
   }
   
   header nav a:hover {
@@ -180,9 +178,6 @@ button {
     border: 0px;
     border-radius: 10px;
 }
-
-
-
 
 /* TELA CELULAR EM PÉ*/
 @media screen and (max-width: 702px) {
@@ -292,8 +287,6 @@ button {
         vertical-align: middle;
         text-align: center;
         width: 90vw;
-
-
     }
 
     header ul {

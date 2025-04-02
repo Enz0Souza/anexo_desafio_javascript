@@ -39,21 +39,18 @@ function SetCarToCompare(el, carClass) {//limita a comparção a 2 carros e proc
         if (index === -1) {
             if (carArr.length < 2) {
                 carArr.push(carClass);
-                
+
             } else {
                 alert("Só é possível comparar 2 carros por vez.");
                 el.checked = false;
             }
         }
     } else {
-        if (index !== -1) {
-            carArr.splice(index, 1);
+        if (index !== -1) {//se o valor não for encontrado
+            carArr.splice(index, 1);//remove os itens em um array pela posição do index
         }
     }
 }
-
-
-
 
 function ShowCompare() {
     if (carArr.length < 2) {//caso o usuario não selecionar 2 carros
@@ -67,13 +64,9 @@ function ShowCompare() {
     compareDiv.scrollIntoView({ behavior: "smooth" });// faz o scroll automatico dela(ou seja quando fazer a comparação subir a pagina e fazer a tabela aparecer)
 }
 
-
-
 function HideCompare() {//esconde a tabela
     document.getElementById("compare").style.display = "none";
 }
-
-
 
 function UpdateCompareTable() {
     if (carArr.length < 2) return;//caso o usuario não selecione 2 carros
@@ -121,13 +114,13 @@ document.addEventListener("DOMContentLoaded", function () {//listener   para exe
 
     function updateButto() {
         const checkedCount = document.querySelectorAll(".checkbox:checked").length;
-        
+
         if (checkedCount === 2) {
             button.style.backgroundColor = "blue"; // Cor do botão quando 2 checkboxes estão selecionadas
-            
+
         } else {
             button.style.backgroundColor = "gray"; // Cor do botão quando as checkbox não estão selecionadas
-            
+            /*button.disabled = true;*/
         }
     }
 
@@ -137,4 +130,3 @@ document.addEventListener("DOMContentLoaded", function () {//listener   para exe
 
     updateButto(); // uptade  para garantir que o botão comece no estado correto
 });
-
