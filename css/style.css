@@ -46,13 +46,26 @@ div#carousel-title {
     margin-top: 10vh;
     margin-bottom: 10px;
     font-weight: bold;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: animation;
 }
 
 
-
+.buttons { 
+    position: absolute; 
+    top: 37%; 
+    left: 28%;
+    transform: translateY(-50%); 
+    width: 44%; 
+    display: flex; 
+    justify-content: space-between; 
+}
+        
+.buttons button { 
+    background: rgba(0,0,0,0.5); 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+}
 
 header ul {
     text-align: center;

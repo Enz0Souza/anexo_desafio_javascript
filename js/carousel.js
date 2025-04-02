@@ -49,3 +49,106 @@ class CarouselItem {
         this.link = link;
     }
 }
+
+//botões 
+// Variável para armazenar o índice da imagem atual
+Carousel._sequence = 0;
+
+// Função para avançar no carrossel
+// Variável para armazenar o índice da imagem atual
+Carousel._sequence = 0;
+Carousel._interval = null;
+
+// Função para iniciar o carrossel automaticamente
+Carousel.Start = function (arr) {
+    if (arr && arr.length > 0) {
+        Carousel._sequence = 0;
+        Carousel._size = arr.length;
+        Carousel.Next();
+        Carousel._interval = setInterval(Carousel.Next, 2000);
+    } else {
+        throw "Method Start need an Array Variable.";
+    }
+};
+
+// Função para avançar no carrossel
+Carousel.Next = function () {
+    Carousel.ResetInterval();
+    let carouselElement = document.getElementById("carousel");
+    let titleElement = document.getElementById("carousel-title");
+
+    if (carouselElement && titleElement) {
+        let currentImage = carouselArr[Carousel._sequence];
+
+        carouselElement.innerHTML = `<a href="${currentImage.link}">
+            <img src="img/${currentImage.img}" width="700">
+        </a>`;
+
+        titleElement.innerHTML = `<a href="${currentImage.link}"><p>${currentImage.text}</p></a>`;
+
+        Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
+    }
+};
+
+// Função para retroceder no carrossel
+// Variável para armazenar o índice da imagem atual
+Carousel._sequence = 0;
+Carousel._interval = null;
+
+// Função para iniciar o carrossel automaticamente
+Carousel.Start = function (arr) {
+    if (arr && arr.length > 0) {
+        Carousel._sequence = 0;
+        Carousel._size = arr.length;
+        Carousel.Next();
+        Carousel.ResetInterval();
+    } else {
+        throw "Method Start need an Array Variable.";
+    }
+};
+
+// Função para avançar no carrossel
+Carousel.Next = function () {
+    Carousel.UpdateCarousel((Carousel._sequence + 1) % Carousel._size);
+    Carousel.ResetInterval();
+};
+
+// Função para retroceder no carrossel
+Carousel.Prev = function () {
+    Carousel.UpdateCarousel((Carousel._sequence - 1 + Carousel._size) % Carousel._size);
+    Carousel.ResetInterval();
+};
+
+// Função para atualizar o carrossel com a nova imagem
+Carousel.UpdateCarousel = function (newIndex) {
+    let carouselElement = document.getElementById("carousel");
+    let titleElement = document.getElementById("carousel-title");
+
+    if (carouselElement && titleElement) {
+        Carousel._sequence = newIndex;
+        let currentImage = carouselArr[Carousel._sequence];
+
+        carouselElement.innerHTML = `<a href="${currentImage.link}">
+            <img src="img/${currentImage.img}" width="700">
+        </a>`;
+
+        titleElement.innerHTML = `<a href="${currentImage.link}"><p>${currentImage.text}</p></a>`;
+    }
+};
+
+// Função para resetar o intervalo quando um botão é clicado
+Carousel.ResetInterval = function () {
+    clearInterval(Carousel._interval);
+    Carousel._interval = setInterval(Carousel.Next, 2000);
+};
+
+// Event listeners para os botões
+window.onload = function () {
+    document.getElementById("nextBtn").addEventListener("click", function() {
+        Carousel.Next();
+    });
+    document.getElementById("prevBtn").addEventListener("click", function() {
+        Carousel.Prev();
+    });
+};
+
