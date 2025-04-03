@@ -91,6 +91,24 @@ button:hover {
 
 .titulo {
     margin-left: 8px;
+    
+}
+
+#imagemcarro{
+    margin-left: 3%;
+    margin-top: 13%;
+}
+
+#Imagemcarrotabela{
+    margin-left: 3%;
+    margin-top: 16%;
+    display: none;
+}
+
+#formbody{
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9;
 }
 
 
@@ -131,4 +149,11 @@ button:hover {
         padding-bottom: 50px;
     }
 
+}
+
+.偽物{
+    align-items: center;
+    width: 1px;
+    height: 1px;
+    
 }

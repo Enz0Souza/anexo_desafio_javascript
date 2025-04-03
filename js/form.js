@@ -44,3 +44,18 @@ window.addEventListener('load', () => {
         }
     }
 });
+
+//animação
+setInterval(() => {
+    const carro1 = document.getElementById("imagemcarro");
+    const carro2 = document.getElementById("Imagemcarrotabela");
+    carro1.style.display = "none"; 
+    carro2.style.display = "block"; 
+  }, 2000); 
+  
+
+    
+    
+
+
+  
