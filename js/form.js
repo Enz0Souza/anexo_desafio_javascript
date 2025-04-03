@@ -54,6 +54,22 @@ setInterval(() => {
 }, 2000);
 
 
+//formatar o cpf e tel
+   function formatarTelefone(campo) {
+      let valor = campo.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+      valor = valor.replace(/^(\d{2})(\d)/, "($1)$2"); // Adiciona parênteses para o DDD
+      valor = valor.replace(/(\d{4})(\d)/, "$1-$2"); // Adiciona o traço
+      campo.value = valor;
+    }
+
+    function formatarCPF(campo) {
+      let valor = campo.value.replace(/\D/g, ""); 
+      valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+      valor = valor.replace(/(\d{3})(\d)/, "$1.$2"); 
+      valor = valor.replace(/(\d{3})(\d{2})$/, "$1-$2"); 
+      campo.value = valor;
+    }
+
 
 
 

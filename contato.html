@@ -56,11 +56,11 @@
                 <form onsubmit="Post(this);">
                     <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
                     <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
-                    <input type="number" name="cpf" placeholder="CPF*" class="fordform" minlength="14" maxlength="14"
-                        required>
+                    <input type="cpf" name="cpf" placeholder="CPF*" class="fordform" minlength="14" maxlength="14"
+                        required oninput="formatarCPF(this)" >
                     <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
-                    <input type="tel" name="telefone" placeholder="TELEFONE* Ex 00-0000-0000" class="fordform"
-                        pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" required>
+                    <input type="tel" name="telefone" placeholder="TELEFONE* Ex (00)-0000-0000" class="fordform" 
+                    minlength="13" maxlength="13" required oninput="formatarTelefone(this)">
                     <select name="contato" class="fordform" required>
                         <option selected disabled>COMO DESEJA SER CONTATADO</option>
                         <option>TELEFONE</option>
