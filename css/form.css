@@ -40,21 +40,21 @@ main div {
     animation-duration: 1.5s;
     animation-name: slide;
     animation-direction: normal;
-  }
-  
-  
-  @keyframes slide {
+}
+
+
+@keyframes slide {
     from {
-      margin-left: 50%;
-      width: 120%;
+        margin-left: 50%;
+        width: 120%;
     }
-  
+
     to {
-      margin-left: 0%;
-      width: 100%;
+        margin-left: 0%;
+        width: 100%;
     }
-  }
-  
+}
+
 
 h2 {
     text-align: left;
@@ -91,21 +91,21 @@ button:hover {
 
 .titulo {
     margin-left: 8px;
-    
+
 }
 
-#imagemcarro{
+#imagemcarro {
     margin-left: 3%;
     margin-top: 13%;
 }
 
-#Imagemcarrotabela{
+#Imagemcarrotabela {
     margin-left: 3%;
     margin-top: 16%;
     display: none;
 }
 
-#formbody{
+#formbody {
     border-radius: 5px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     background: #f9f9f9;
@@ -151,9 +151,9 @@ button:hover {
 
 }
 
-.偽物{
+.偽物 {
     align-items: center;
     width: 1px;
     height: 1px;
-    
+
 }

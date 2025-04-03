@@ -111,10 +111,10 @@ Carousel.ResetInterval = function () {
 
 // Event listeners para os botões
 window.onload = function () {
-    document.getElementById("nextBtn").addEventListener("click", function() {
+    document.getElementById("nextBtn").addEventListener("click", function () {
         Carousel.Next();
     });
-    document.getElementById("prevBtn").addEventListener("click", function() {
+    document.getElementById("prevBtn").addEventListener("click", function () {
         Carousel.Prev();
     });
 };

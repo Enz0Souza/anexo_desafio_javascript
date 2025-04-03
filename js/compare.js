@@ -117,10 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {//listener   para exe
 
         if (checkedCount === 2) {
             button.style.backgroundColor = "blue"; // Cor do botão quando 2 checkboxes estão selecionadas
-
         } else {
             button.style.backgroundColor = "gray"; // Cor do botão quando as checkbox não estão selecionadas
-            /*button.disabled = true;*/
+            /*button.disabled = true;*///desabilitar o botão
         }
     }
 

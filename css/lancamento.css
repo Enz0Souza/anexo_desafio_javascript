@@ -16,12 +16,14 @@ img.photocar {
     width: 250px;
 }
 
-ul.modelcars, img.photocar, ul.modelcars li {
+ul.modelcars,
+img.photocar,
+ul.modelcars li {
     animation-duration: 3s;
     animation-name: opacity;
     animation-direction: normal
-  }
-  
+}
+
 .checkbox {
     width: 30px;
     height: 30px;
@@ -104,18 +106,18 @@ p {
     animation-duration: 2s;
     animation-name: opacity;
     animation-direction: normal;
-  }
-  
-  @keyframes opacity {
+}
+
+@keyframes opacity {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
+}
+
 
 
 /* celular em pé*/
@@ -129,26 +131,27 @@ p {
             bottom: 0;
             left: 0;
             height: 40px;
-            position: relative;/* por causa de bugs de colisão com a tabela deixei relativo para o conteudo empurrar o footer pro final do */
+            position: relative;
+            /* por causa de bugs de colisão com a tabela deixei relativo para o conteudo empurrar o footer pro final do */
             width: 92%;
         }
-    
+
         img.photocar {
             width: 200px auto;
             height: auto;
         }
-    
+
         #buttonn {
             margin-bottom: 30%;
         }
-    
+
         ul.modelcars {
             display: block;
             text-align: center;
             align-items: center;
             margin-left: 15%;
         }
-    
+
         div#compare {
             position: absolute;
             top: 70%;
@@ -165,11 +168,11 @@ p {
             -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
             box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
         }
-    
+
     }
-    
+
 }
-    
+
 
 
 

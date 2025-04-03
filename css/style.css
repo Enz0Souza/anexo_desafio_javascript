@@ -30,6 +30,7 @@ div#carousel {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+
     img {
         animation: animation 2s;
     }
@@ -49,21 +50,21 @@ div#carousel-title {
 }
 
 
-.buttons { 
-    position: absolute; 
-    top: 40%; 
+.buttons {
+    position: absolute;
+    top: 40%;
     left: 23%;
-    width: 54%; 
-    display: flex; 
-    justify-content: space-between; 
+    width: 54%;
+    display: flex;
+    justify-content: space-between;
 }
-        
-.buttons button { 
-    background: rgba(0,0,0,0.5); 
-    color: white; 
-    border: none; 
-    padding: 10px; 
-    cursor: pointer; 
+
+.buttons button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 header ul {
@@ -95,7 +96,8 @@ header nav {
     vertical-align: middle;
     width: 75vw;
 }
-header nav a{
+
+header nav a {
     text-align: center;
     font-size: 100%;
     color: #1351d8;
@@ -104,13 +106,14 @@ header nav a{
     border-radius: 20px;
     padding: 15px 6px;
     margin: 1%;
-  }
-  
-  header nav a:hover {
-    background-color:  #1351d8;;
+}
+
+header nav a:hover {
+    background-color: #1351d8;
+    ;
     color: white;
     font-size: 130;
-  }
+}
 
 header nav a {
     color: #1351d8;
@@ -172,7 +175,7 @@ button:hover {
 }
 
 button {
-    background:#1351d8;
+    background: #1351d8;
     color: #fff;
     border: 0px;
     border-radius: 10px;
@@ -240,6 +243,7 @@ button {
 @media screen and (min-width: 1400px) {
     div#carousel-title {
         margin-top: -3%;
+
         #carousel img {
             margin-left: 1%;
             margin-top: 10%;
@@ -249,14 +253,15 @@ button {
         }
 
     }
-    .buttons { 
-        position: absolute; 
-        top: 27%; 
+
+    .buttons {
+        position: absolute;
+        top: 27%;
         left: 32%;
-        transform: translateY(-50%); 
-        width: 36%; 
-        display: flex; 
-        justify-content: space-between; 
+        transform: translateY(-50%);
+        width: 36%;
+        display: flex;
+        justify-content: space-between;
     }
 
     header nav {
