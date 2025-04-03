@@ -242,36 +242,20 @@ button {
 /* TELA GRANDE */
 @media screen and (min-width: 1400px) {
     div#carousel-title {
-        margin-top: -3%;
-
-        #carousel img {
-            margin-left: 1%;
-            margin-top: 10%;
-            width: 80% auto;
-            height: auto;
-
-        }
-
+        margin-top: 2%;
+        position: relative; 
     }
 
     .buttons {
         position: absolute;
-        top: 27%;
-        left: 32%;
+        top: 37%; 
+        left: 29%;
         transform: translateY(-50%);
-        width: 36%;
+        width: 42%;
         display: flex;
         justify-content: space-between;
     }
-
-    header nav {
-        display: inline-block;
-        vertical-align: middle;
-        width: 80vw;
-        margin-left: 2%;
-    }
-}
-
+    
 /* TELA DEITADA(LANDSCAPE) */
 @media screen and (max-height: 540px) {
 
@@ -315,4 +299,5 @@ button {
     }
 
 
+}
 }
