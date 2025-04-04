@@ -57,10 +57,10 @@
                     <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
                     <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
                     <input type="cpf" name="cpf" placeholder="CPF*" class="fordform" minlength="14" maxlength="14"
-                        required oninput="formatarCPF(this)" >
+                        required oninput="formatarCPF(this)">
                     <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
-                    <input type="tel" name="telefone" placeholder="TELEFONE* Ex (00)-0000-0000" class="fordform" 
-                    minlength="13" maxlength="13" required oninput="formatarTelefone(this)">
+                    <input type="tel" name="telefone" placeholder="TELEFONE* Ex (00)-0000-0000" class="fordform"
+                        minlength="13" maxlength="13" required oninput="formatarTelefone(this)">
                     <select name="contato" class="fordform" required>
                         <option selected disabled>Tipo de Contato</option>
                         <option>Elogio</option>
@@ -68,6 +68,18 @@
                         <option>Solicitação</option>
                     </select>
                     <textarea name="mensagem" class="fordform" placeholder="Mensagem*"></textarea>
+                    <div id="termos">
+                        Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer,
+                        momento será possivel editar ou remover tais dados. <a
+                            href="https://www.ford.com.br/politica-de-privacidade/">Termos e Condições</a>
+                        <br>
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        Sim. Li e concordo com os vossos termos.
+                        <br>
+
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        Sim Também quero receber descontos e novidades.
+                    </div>
                     <br>
                     <button type="submit">Enviar</button>
                 </form>

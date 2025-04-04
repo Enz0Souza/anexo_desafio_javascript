@@ -42,6 +42,12 @@ main div {
     animation-direction: normal;
 }
 
+#termos{
+    font-size: small;
+    color: gray;
+    width: 35%;
+    text-align: justify;
+}
 
 @keyframes slide {
     from {
@@ -69,6 +75,8 @@ button {
     float: right;
     cursor: pointer;
 }
+
+
 
 @keyframes Anima {
     0% {
