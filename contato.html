@@ -62,10 +62,13 @@
                     <input type="tel" name="telefone" placeholder="TELEFONE* Ex (00)-0000-0000" class="fordform" 
                     minlength="13" maxlength="13" required oninput="formatarTelefone(this)">
                     <select name="contato" class="fordform" required>
-                        <option selected disabled>COMO DESEJA SER CONTATADO</option>
-                        <option>TELEFONE</option>
-                        <option>E-MAIL</option>
+                        <option selected disabled>Tipo de Contato</option>
+                        <option>Elogio</option>
+                        <option>Reclamação</option>
+                        <option>Solicitação</option>
                     </select>
+                    <textarea name="mensagem" class="fordform" placeholder="Mensagem*"></textarea>
+                    <br>
                     <button type="submit">Enviar</button>
                 </form>
             </div>

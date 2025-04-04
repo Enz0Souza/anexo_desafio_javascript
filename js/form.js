@@ -1,13 +1,14 @@
 //class contato
 
 class contato {
-    constructor(nome, sobrenome, email, cpf, telefone, contato) {//inicializa as propriedades do objeto com os valores passados como argumentos
+    constructor(nome, sobrenome, email, cpf, telefone, contato, mensagem) {//inicializa as propriedades do objeto com os valores passados como argumentos
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
         this.cpf = cpf;
         this.telefone = telefone;
         this.contato = contato;
+        this.mensagem = mensagem
     }
 }
 
@@ -18,7 +19,9 @@ function Post(form) {// recebe o parametro form que representa o formulario html
         form.elements.namedItem("email").value,
         form.elements.namedItem("cpf").value,
         form.elements.namedItem("telefone").value,
-        form.elements.namedItem("contato").value
+        form.elements.namedItem("contato").value,
+        form.elements.namedItem("mensagem").value
+        
     );
     Enviar(data)//passa as informaç~es para enviar
     console.table(JSON.parse(dadosSalvos));//aparecer as informações no console
