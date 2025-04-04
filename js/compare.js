@@ -49,7 +49,7 @@ function SetCarToCompare(el, carClass) {//limita a comparção a 2 carros e proc
         if (index !== -1) {//se o valor não for encontrado
             carArr.splice(index, 1);//remove os itens em um array pela posição do index
         }
-    }
+    } console.log(carArr)
 }
 
 function ShowCompare() {
