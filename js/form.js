@@ -72,9 +72,30 @@ setInterval(() => {
       valor = valor.replace(/(\d{3})(\d{2})$/, "$1-$2"); 
       campo.value = valor;
     }
-
-
-
-
-
-
+    
+    //botão ficar cinza caso não esteja selecionado nenhum carro
+    document.addEventListener("DOMContentLoaded", function () {
+        const checkboxes = document.querySelectorAll(".checkbox");
+        const button = document.getElementById("meuBotao");
+    
+        function updateButton() {
+            const checkedCount = document.querySelectorAll(".checkbox:checked").length;
+    
+            if (checkedCount === 2) {
+                button.classList.add("ativo");
+                button.style.backgroundColor = "blue";
+                button.disabled = false;
+            } else {
+                button.classList.remove("ativo");
+                button.style.backgroundColor = "gray";
+                button.disabled = true;
+            }
+        }
+    
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", updateButton);
+        });
+    
+        updateButton(); // Garantir o estado inicial
+    });
+    

@@ -42,12 +42,15 @@ main div {
     animation-direction: normal;
 }
 
-#termos{
+#termos {
     font-size: small;
     color: gray;
-    width: 35%;
+    max-width: 400px;
     text-align: justify;
+    margin-top: 10px;
+    display: block;
 }
+
 
 @keyframes slide {
     from {
@@ -74,9 +77,22 @@ button {
     margin-right: 8px;
     float: right;
     cursor: pointer;
+    background-color: gray;
+    transition: none;
+}
+
+button.ativo {
+    transition: background-color 0.3s ease;
 }
 
 
+button.ativo:hover {
+    animation-name: Anima;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
 @keyframes Anima {
     0% {
@@ -88,14 +104,6 @@ button {
     }
 }
 
-
-button:hover {
-    animation-name: Anima;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
 
 .titulo {
     margin-left: 8px;
