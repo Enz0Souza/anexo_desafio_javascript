@@ -1,7 +1,7 @@
 //class contato
 
 class contato {
-    constructor(nome, sobrenome, email, cpf, telefone, contato, mensagem) {//inicializa as propriedades do objeto com os valores passados como argumentos
+    constructor(nome, sobrenome, email, cpf, telefone, contato, mensagem, checkbox, checkboxpromo ) {//inicializa as propriedades do objeto com os valores passados como argumentos
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
@@ -9,6 +9,8 @@ class contato {
         this.telefone = telefone;
         this.contato = contato;
         this.mensagem = mensagem
+        this.checkbox = checkbox;
+        this.checkboxpromo = checkboxpromo;
     }
 }
 
@@ -20,11 +22,14 @@ function Post(form) {// recebe o parametro form que representa o formulario html
         form.elements.namedItem("cpf").value,
         form.elements.namedItem("telefone").value,
         form.elements.namedItem("contato").value,
-        form.elements.namedItem("mensagem").value
+        form.elements.namedItem("mensagem").value,
+        form.elements.namedItem("checkbox").checked,
+        form.elements.namedItem("checkboxpromo").checked
         
     );
     Enviar(data)//passa as informaç~es para enviar
     console.table(JSON.parse(dadosSalvos));//aparecer as informações no console
+
 }
 
 // Função para enviar os dados
@@ -75,13 +80,13 @@ setInterval(() => {
     
     //botão ficar cinza caso não esteja selecionado nenhum carro
     document.addEventListener("DOMContentLoaded", function () {
-        const checkboxes = document.querySelectorAll(".checkbox");
+        const checkboxes = document.querySelectorAll("#termosCheckbox");
         const button = document.getElementById("meuBotao");
     
         function updateButton() {
-            const checkedCount = document.querySelectorAll(".checkbox:checked").length;
+            const checkedCount = document.querySelectorAll("#termosCheckbox:checked").length;
     
-            if (checkedCount === 2) {
+            if (checkedCount === 1) {
                 button.classList.add("ativo");
                 button.style.backgroundColor = "blue";
                 button.disabled = false;
